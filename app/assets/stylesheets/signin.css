@@ -1,0 +1,39 @@
+.signStyle {
+    color: #1a1f36;
+    word-wrap: break-word;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+    font-size: 1vw; /* Para que se adapte hasta 4K, lo malo es que en pantallas muy chicas como celulares no funcionará igual de bien, es todo otro setup */
+  }
+
+.background-container {
+    background-image: url('/assets/Background1.png');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    width: 6vw;
+    height: 10vh;
+}
+
+.checkboxSized {
+    width: 1.5vw ;
+    height: 1.5vh;
+}
+
+.whiteCard {
+    background-color: aliceblue;
+    border-radius: 25px;
+    text-align: center;
+    align-items: center;
+    min-height: fit-content;
+    width: 30vw;
+    padding: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

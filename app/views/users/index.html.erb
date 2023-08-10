@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "signin", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+    <!-- Background Container -->
+    <div class="background-container">
+
+      <div class="errors">
+        <% if flash[:register_errors] %>
+          <div class="alert alert-danger">
+            <% flash[:register_errors].each do |error| %>
+              <p> <%=error%> </p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+
+      <h1>
+          Login 
+      </h1>
+
+      <form action="/sessions" method="POST">
+          <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+          <input type="email" name="login[email]" placeholder="Email">
+          <input type="password" name="login[password]" placeholder="Password">
+          <input type="submit" name="submit" class="submit">
+      </form>
+
+      <h1>
+          Registration
+      </h1>
+
+      <form action="/users" method="POST">
+          <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+          <input type="name" name="user[name]" placeholder="Name">
+          <input type="email" name="user[email]" placeholder="Email">
+          <input type="password" name="user[password]" placeholder="Password">
+          <input type="password" name="user[password_confirmation]" placeholder="Password Confirmation">
+          <input type="submit" name="submit" class="submit">
+      </form>
+
+      <%= yield %>
+
+    <!-- Background Container End -->
+    </div>
+  </body>
+</html>
