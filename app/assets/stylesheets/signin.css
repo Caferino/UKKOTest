@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .signStyle {
     color: #1a1f36;
     word-wrap: break-word;
@@ -24,7 +28,7 @@
     height: 1.5vh;
 }
 
-.whiteCard {
+.white-card {
     background-color: aliceblue;
     border-radius: 25px;
     text-align: center;
