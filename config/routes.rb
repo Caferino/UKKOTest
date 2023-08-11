@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
-  get '/dashboard' => 'stores#index'
+  get '/dashboard' => 'dashboard#index'
 
   # Defines the root path route ("/")
   root "users#index"

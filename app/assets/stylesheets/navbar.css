@@ -1,0 +1,65 @@
+.navBarWidth {
+    z-index: 9999;
+    flex: 0 0 auto;
+    width: var(--sideBar-width);
+    color: #000;
+    background-color: rgba(248,249,250, var(--bs-bg-opacity,1));
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.navLink {
+    display: flex;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--bs-nav-link-color);
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    align-items: center;
+}
+
+.navbarIcons {
+    width: 30px;
+    height: 30px;
+    margin-left: 0vw;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+}
+
+.navbarText {
+    position: absolute;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:#1a1f36;
+    margin-left: 42px;
+    margin-right: 0px;
+}
+
+.profilePhoto {
+    position: relative;
+    align-self: center;
+}
+
+.profileName {
+    font-size: 18px;
+    /* font-size: 1vw; */
+    align-self: center;
+    text-align: center;
+}
+
+/* Did not work with "vw" I think, not sure why */
+@media (max-width: 768px) {
+    .profileName {
+        font-size: 16px; /* Adjust font size for screens up to 768px wide */
+    }
+}
+
+@media (max-width: 576px) {
+    .profileName {
+        font-size: 14px; /* Adjust font size for screens up to 576px wide */
+    }
+}

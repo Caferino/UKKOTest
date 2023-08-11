@@ -14,5 +14,7 @@
  *= require_self
  */
 
- @import 'normalize.css';
  @import 'signin.css';
+ @import 'navbar.css';
+ @import 'dashboard.css';
+ @import 'dashboardContent.css';

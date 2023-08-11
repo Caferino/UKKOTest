@@ -33,6 +33,9 @@ gem "pg"
 # User Authentication Security
 gem "bcrypt"
 
+# Bootstrap (solo para el navBar del Dashboard)
+gem 'bootstrap', '~> 5.2'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

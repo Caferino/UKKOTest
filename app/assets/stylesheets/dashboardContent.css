@@ -1,0 +1,14 @@
+.editorsWidth {
+    z-index: 1;
+    flex: 1 1 auto;
+    width: auto;  /* width: 83.33333333%; */
+    margin-left: auto!important;
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+}
+
+.saveAndExportSeparator {
+    font-size: 1.1vw;
+    margin-left: 4px;
+    margin-right: 4px;
+}
