@@ -13,14 +13,14 @@
 
   <body>
 
-    <!-- NavBar Container -->
+    <!-- Dashboard Container -->
     <div class="dashboard-style">
         <div class="dashboard-content">
         
-            <!-- === Sección Header: Logo, Botón Sign Out (Salir) === -->
+            <!-- === Header === -->
             <header class="header-content">
 
-                <!-- Logo SILMA como botón para NavBar -->
+                <!-- Logo -->
                 <%= image_tag 'logoWhite.png', alt: 'Logo', class: 'logo-dashboard', id: 'logo', style: 'cursor: pointer;', onclick: 'toggleNavBar()' %>
 
                 
@@ -38,62 +38,100 @@
             </header>
 
 
-            <!-- === Header Section: Logo, Sign Out Button (Exit) === -->
+            <!-- === NavBar === -->
             <div class="container-fluid">
                 <div class="row">
 
-                    <nav id="sideBarMenu" class="navBarWidth">
-                        <div class="position-sticky pt-3 sidebar-sticky">
+                    <span class="dashboardContent-wrapper">
 
-                        <!-- 1. Foto de Perfil -->
-                        <div class="profilePhoto">
-                            <!-- LOGIC -->
-                        </div>
-                        <p> <!-- ESPACIO --> </p>
+                        <nav id="sideBarMenu" class="navBarWidth">
+                            <div class="position-sticky pt-3 sidebar-sticky">
 
-
-                        <!-- 2. Nombre de Usuario -->
-                        <div class="profileName">
-                            <!-- LOGIC -->
-                            <div>
-                                <p>Welcome, <%= @current_user.name %>!</p>
+                            <!-- Profile Photo -->
+                            <div class="profilePhoto">
+                                <!-- LOGIC -->
                             </div>
-                        </div>
-                        <p> <!-- ESPACIO --> </p>
-
-
-                        
-                        <ul class="nav flex-column">
-
-                            <!-- 3. Stores -->
-                            <li class="nav-item">
-                                <!-- LOGIC -->
-                                <div>
-                                <a class="navLink" onClick="">
-                                    <img class="navbarIcons" src='/assets/add_story.svg' />
-                                    <span class="navbarText" >Stores</span>
-                                </a>
-                                </div>
-                            </li>
                             <p> <!-- ESPACIO --> </p>
 
 
-                            <!-- 4. Books -->
-                            <li class="nav-item">
-                                <!-- LOGIC -->
+                            <!-- Welcome Username -->
+                            <div class="profileName">
                                 <div>
-                                <a class="navLink" onClick="">
-                                    <img class="navbarIcons" src='/assets/stories.svg' />
-                                    <span class="navbarText" >Books</span>
-                                </a>
+                                    <p>Welcome, <%= @current_user.name %>!</p>
                                 </div>
-                            </li>
-                            <p> <!-- ESPACIO --> </p>
+                            </div>
+                            <p> <!-- Espacio --> </p>
 
-                        </ul>
+                            <!-- === Sections === -->
+                            
+                            <ul class="nav flex-column">
 
-                        </div>
-                    </nav>
+                                <!-- Stores -->
+                                <li class="nav-item">
+                                    <div>
+                                    <a class="navLink" onClick="">
+                                        <img class="navbarIcons" src='/assets/add_story.svg' />
+                                        <span class="navbarText" >Stores</span>
+                                    </a>
+                                    </div>
+                                </li>
+                                <p> <!-- Espacio --> </p>
+
+
+                                <!-- Books -->
+                                <li class="nav-item">
+                                    <div>
+                                    <a class="navLink" onClick="">
+                                        <img class="navbarIcons" src='/assets/stories.svg' />
+                                        <span class="navbarText" >Books</span>
+                                    </a>
+                                    </div>
+                                </li>
+                                <p> <!-- Espacio --> </p>
+
+                            </ul>
+
+                            </div>
+                        </nav>
+
+                        <main class="editorsWidth">
+                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom">
+
+                                <!-- Content Header -->
+                                <h2 style={{paddingLeft:'6px', margin:'none', marginBottom:'0px'}}>Vista Previa</h2>
+
+                                <div class="btn-toolbar mb-2 mb-md-0">
+                                    <div class="btn-group me-2">
+
+                                        <!-- Content -->
+                                        <span>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Guardar Árbol</button>
+                                            <span class="saveAndExportSeparator">|</span>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Exportar Rama</button>
+                                            <span class="saveAndExportSeparator">|</span>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Generar Reporte</button>
+                                            <span class="saveAndExportSeparator">|</span>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Generar PDF</button>
+                                        </span>
+
+                                        <div class="input-group">
+                                            <div class="form-outline">
+                                                <input type="search" id="form1" class="form-control" />
+                                                <label class="form-label" for="form1">Search</label>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </main>
+
+                    </span>
 
                 </div>
             </div>

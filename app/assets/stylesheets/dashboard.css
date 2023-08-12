@@ -27,7 +27,7 @@ body {
     overflow-x: auto;
 }
 
-.dashboard-contentWrapper {
+.dashboardContent-wrapper {
     position: sticky;
     display: flex;
     flex-direction: row;
