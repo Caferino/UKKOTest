@@ -34,7 +34,13 @@ gem "pg"
 gem "bcrypt"
 
 # Bootstrap (solo para el navBar del Dashboard)
-gem 'bootstrap', '~> 5.2'
+gem "bootstrap", "~> 5.2"
+
+# Sassy Bootstrap
+gem "bootstrap-sass"
+
+# FontAwesome, for the Search Bar
+gem "font-awesome-rails"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

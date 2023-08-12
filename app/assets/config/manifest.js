@@ -6,3 +6,4 @@
 //= link navbar.css
 //= link dashboard.css
 //= link dashboardContent.css
+//= link font-awesome.css
