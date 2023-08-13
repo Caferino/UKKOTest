@@ -6,12 +6,26 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             redirect_to '/dashboard'
         else
-            # Sin dar pistas de dónde se equivocó, para evitar un posible ataque
+            # Give no hints, for more security
             flash[:login_errors] = ['Invalid credentials']
             redirect_to '/'
         end
     end
 
+    # Logout action
+    def destroy
+        # Destroy the user's session
+        session.delete(:user_id)
+        session[:user_id] = nil
+
+        # Optionally, you can display a flash message
+        flash[:notice] = 'Logged out successfully'
+
+        # Redirect to the home page or another appropriate location
+        redirect_to root_path
+    end
+
+    # Private variables
     private
         def login_params
             # En base a los inputs types names establecidos en /users/index.html.erb

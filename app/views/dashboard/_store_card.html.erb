@@ -1,0 +1,24 @@
+<!-- app/views/stores/_store_card.html.erb -->
+
+<!-- Store Card -->
+<div class="card">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Info</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Library</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">...</a>
+        </li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"> <%= store.codename %> </h5>
+        <p class="card-text">Address: <%= store.address %> </p>
+        <p class="card-text">Phone: <%= store.phone %> </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div><br>

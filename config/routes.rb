@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "users#index"
+
+  # Route for logging out
+  delete '/logout', to: 'sessions#destroy', as: :logout
 end

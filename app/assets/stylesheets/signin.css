@@ -1,6 +1,8 @@
-body {
+body, html {
     margin: 0;
-}
+    width: 100vw;
+    height: 100vh;
+  }
 
 .signStyle {
     color: #1a1f36;
@@ -11,16 +13,22 @@ body {
 
 .background-container {
     background-image: url('/assets/Background1.png');
-    height: 100vh;
-    width: 100vw;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.logo-container {
+    width: auto;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
-    width: 6vw;
-    height: 10vh;
+    width: 20%;
+    height: 20%;
 }
 
 .checkboxSized {
@@ -40,4 +48,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.custom-btn {
+    font-size: 18px!important;
+    font-family: 'Segoe UI', sans-serif!important;
+    font-weight: 600!important;
+    text-transform: none;
 }
