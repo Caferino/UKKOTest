@@ -22,9 +22,11 @@
             <header class="header-content">
 
                 <!-- Logo -->
-                <%= image_tag 'logoWhite.png', alt: 'Logo', class: 'logo-dashboard', id: 'logo', style: 'cursor: pointer;', onclick: 'toggleNavBar()' %>
+                <div class="dashboard-logo-container">
+                    <%= image_tag 'logoWhite.png', alt: 'Logo', class: 'logo-dashboard', id: 'logo', style: 'cursor: pointer;', onclick: 'toggleNavBar()' %>
+                </div>
 
-                
+                <!-- Logout -->
                 <div class="navbar-nav">
                     <div class="nav-item text-nowrap">
 
@@ -49,7 +51,8 @@
 
                             <!-- Profile Photo -->
                             <div class="profilePhoto">
-                                <!-- LOGIC -->
+                                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/5.webp" class="rounded-circle shadow-4"
+                                style="width: 100px;" alt="Avatar" />
                             </div>
                             <p> <!-- ------- --> </p>
 

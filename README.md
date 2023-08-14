@@ -17,9 +17,6 @@ Things you may want to cover:
 
 **How to execute:**
 
-1.
-
-
 Concerns / To-Do:
 
 - **Sign-in view:**
@@ -33,7 +30,7 @@ Concerns / To-Do:
 
 - **Dashboard:**
 
-1. DDD.
+1. In index.html.erb line:43, and dashboard.css (classes: .container-fluid and .row) are not respecting or for some reason adding "padding-left" when it should not. Have deleten, used 0 as value and "!important", but it won't respect any, especifically ".row". It's odd, it makes the Dashboard's menu have a little pad on the left, affecting its alignment with the logo above.
 2. DDD.
 3. DDD.
 
