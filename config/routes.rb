@@ -4,9 +4,15 @@ Rails.application.routes.draw do
   resources :books
   resources :stores
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Sign in / Sign up
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
+
+  # Dasboard
   get '/dashboard' => 'dashboard#index'
+  get 'load_content', to: 'dashboard#load_content'
+
 
   # Defines the root path route ("/")
   root "users#index"

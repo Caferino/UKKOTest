@@ -72,7 +72,7 @@
                                 <!-- Stores -->
                                 <li class="nav-item">
                                     <div>
-                                    <a class="navLink" onClick="">
+                                    <a class="navLink" onClick="loadContent('store_cards'); return false;">
                                         <img class="navbarIcons" src='/assets/add_story.svg' />
                                         <span class="navbarText" >Stores</span>
                                     </a>
@@ -84,7 +84,7 @@
                                 <!-- Books -->
                                 <li class="nav-item">
                                     <div>
-                                    <a class="navLink" onClick="">
+                                    <a class="navLink" onClick="loadContent('load_books'); return false;">
                                         <img class="navbarIcons" src='/assets/stories.svg' />
                                         <span class="navbarText" >Books</span>
                                     </a>
@@ -132,7 +132,12 @@
 
                             <!-- Automated Cards -->
                             <!-- Will load Bookstores that exist in the DB -->
-                            <div class="container">
+                            <div class="container-for-content">
+
+                                <!-- IMP: For some reason, Store button onClick=loadContent(store_cards)
+                                     isnt doing anything. Fixed the routing errors, just, no cards... -->
+
+                                <!-- This works, but it should be a partial, thats what loadContent() should do -->
                                 <% @stores.each do |store| %>
                                     <%= render partial: 'store_card', locals: { store: store } %>
                                 <% end %>

@@ -140,3 +140,7 @@ body {
     border: solid 1px black;
     background-color: rgb(255, 255, 255);
 }
+
+.container-for-content {
+    width:auto;
+}
