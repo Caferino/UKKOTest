@@ -2,10 +2,12 @@
 // Base styles
 //
 
+// Removed "flex-wrap: wrap;", not sure if anything other than search bars use this 
+// class, as they might be affected by that and might need to add it manually.
 .input-group {
   position: relative;
   display: flex;
-  flex-wrap: wrap; // For form validation feedback
+  // flex-wrap: wrap; // Was messing my search bars // For form validation feedback
   align-items: stretch;
   width: 100%;
 

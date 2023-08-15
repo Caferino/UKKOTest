@@ -148,3 +148,7 @@ body {
     /* Add scrollbars if content overflows vertically */
     overflow-y: auto;
 }
+
+.dashboard-content-title {
+    padding-top: 5px;
+}
