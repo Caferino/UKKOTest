@@ -81,8 +81,7 @@ body {
 }
 
 .logout {
-    width: 30px;
-    height: 30px;
+    height: 25px;
     border: none;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -91,8 +90,7 @@ body {
 
 .logout-hover {
     display: none;
-    width: 30px;
-    height: 30px;
+    height: 25px;
     border: none;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -142,5 +140,12 @@ body {
 }
 
 .container-for-content {
-    width:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0; /* Important for flex layout to work properly */
+    max-height: 100vh; /* Set a maximum height based on viewport height */
+
+    /* Add scrollbars if content overflows vertically */
+    overflow-y: auto;
 }

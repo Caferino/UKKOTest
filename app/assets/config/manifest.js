@@ -5,6 +5,7 @@
 //= link signin.css
 //= link navbar.css
 //= link dashboard.css
+//= link dashboard.js
 //= link dashboardContent.css
 //= link font-awesome.css
 //= link jquery.js
