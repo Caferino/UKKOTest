@@ -75,7 +75,6 @@ body {
 .logo-dashboard {
     width: 40px;
     height: 50px;
-    margin-left: calc((var(--sideBar-width) - 50px) / 2); /* Hardcoded: Es 87.5px porque si el SideBar mide 225px netos, le quitamos 50px que mide el logo de ancho, luego dividirlo entre 2 (left and right paddings). De esta manera el logo siempre estará centrado con el Profile Photo */
     margin-top: 10px;
     margin-bottom: 10px;
 }

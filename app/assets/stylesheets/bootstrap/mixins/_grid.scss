@@ -35,9 +35,15 @@
   padding-right: calc(
     var(--#{$prefix}gutter-x) * 0.5
   ); // stylelint-disable-line function-disallowed-list
-  padding-left: calc(
-    var(--#{$prefix}gutter-x) * 0.5
-  ); // stylelint-disable-line function-disallowed-list
+  
+  /* 
+     Instead of canceling the SASS script from .row in _grid.scss line 9,
+     I change padding-left from: "calc(var(--#{$prefix}gutter-x) * 0.5"
+     to: "0". For some reason it will respect this rule over all unless
+     I change the name of my own ".row" to something else, but I think
+     I used the same name to "add extra CSS to it", not replace it all.
+  */
+  padding-left: 0; // stylelint-disable-line function-disallowed-list
   margin-top: var(--#{$prefix}gutter-y);
 }
 
