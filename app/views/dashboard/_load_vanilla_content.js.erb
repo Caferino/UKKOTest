@@ -1,0 +1,2 @@
+# views/dashboard/_load_content_vanilla.js.erb
+$('#dashboard-content-id').html("<%= j(render partial: 'dashboard/store_card', collection: @stores, as: :store) %>");

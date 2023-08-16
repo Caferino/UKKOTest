@@ -15,5 +15,9 @@ class DashboardController < ApplicationController
       render status: :not_found
     end
   end
+
+  def load_content_vanilla
+    render partial: 'dashboard/store_card', collection: @stores, as: :store
+  end
       
 end

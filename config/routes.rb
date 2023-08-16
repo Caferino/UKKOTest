@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # Dasboard
   get '/dashboard' => 'dashboard#index'
   get 'load_content', to: 'dashboard#load_content'
+  get 'load_content_vanilla', to: 'dashboard#load_content_vanilla', as: 'load_content_vanilla'
 
 
   # Defines the root path route ("/")

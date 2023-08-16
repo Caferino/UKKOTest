@@ -71,7 +71,11 @@
 
                                 <!-- Stores -->
                                 <li class="nav-item">
-                                    <div>
+                                    <div id="dashboard-content-id">
+                                    <!-- Vanilla Attempt -->
+                                    <%= link_to 'Load Content', load_content_vanilla_path, remote: true %>
+                                    
+                                    <!-- AJAX Attempt -->
                                     <a class="navLink" onClick="loadContent('store_cards'); return false;">
                                         <img class="navbarIcons" src='/assets/add_story.svg' />
                                         <span class="navbarText" >Stores</span>
