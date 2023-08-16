@@ -1,0 +1,55 @@
+<!-- Left Menu -->
+<nav id="sideBarMenu" class="navBarWidth">
+    <div class="position-sticky pt-3 sidebar-sticky">
+
+    <!-- Profile Photo -->
+    <div class="profilePhoto">
+        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/5.webp" class="rounded-circle shadow-4"
+        style="width: 100px;" alt="Avatar" />
+    </div>
+    <p> <!-- ------- --> </p>
+
+
+    <!-- Welcome Username -->
+    <div class="profileName">
+        <div>
+            <p>Welcome, <%= @current_user.name %>!</p>
+        </div>
+    </div>
+    <p> <!-- ------- --> </p>
+
+    <!-- === Sections === -->
+
+    <ul class="nav flex-column">
+
+        <!-- Stores -->
+        <li class="nav-item">
+            <div id="dashboard-content-id">
+            <!-- Vanilla Attempt -->
+            <%= link_to 'Load Content', load_content_vanilla_path, remote: true %>
+            
+            <!-- AJAX Attempt -->
+            <a class="navLink" onClick="loadContent('store_cards'); return false;">
+                <img class="navbarIcons" src='/assets/add_story.svg' />
+                <span class="navbarText" >Stores</span>
+            </a>
+            </div>
+        </li>
+        <p> <!-- ------- --> </p>
+
+
+        <!-- Books -->
+        <li class="nav-item">
+            <div>
+            <a class="navLink" onClick="loadContent('load_books'); return false;">
+                <img class="navbarIcons" src='/assets/stories.svg' />
+                <span class="navbarText" >Books</span>
+            </a>
+            </div>
+        </li>
+        <p> <!-- ------- --> </p>
+
+    </ul>
+
+    </div>
+</nav>

@@ -1,0 +1,38 @@
+<!-- Dashboard Content Area -->
+<main class="editorsWidth">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom">
+
+        <!-- Search Bar -->
+        <div class="input-group">
+            <div class="form-outline">
+                <input type="search" id="form1" class="form-control" />
+                <label class="form-label" for="form1">Search</label>
+            </div>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        
+    </div>
+
+    <!-- Dashboard Content -->
+
+    <!-- Title -->
+    <div class="dashboard-content-title">
+        <h1> Stores </h1>
+    </div>
+
+    <!-- Automated Cards -->
+    <!-- Will load Bookstores that exist in the DB -->
+    <div class="container-for-content">
+
+        <!-- IMP: For some reason, Store button onClick=loadContent(store_cards)
+                isnt doing anything. Fixed the routing errors, just, no cards... -->
+
+        <!-- This works, but it should be a partial, thats what loadContent() should do -->
+        <% @stores.each do |store| %>
+            <%= render partial: 'store_card', locals: { store: store } %>
+        <% end %>
+    </div>
+    
+</main>

@@ -29,6 +29,11 @@
   </head>
 
   <body>
+
+    <!-- Render the navbar partial unless it's the login page -->
+    <%= render 'navbar/navbar' unless current_page?(users_index_path) %>
+    
+
     <%= yield %>
     
   </body>
