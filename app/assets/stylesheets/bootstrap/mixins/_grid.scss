@@ -32,10 +32,8 @@
   flex-shrink: 0;
   width: 100%;
   max-width: 100%; // Prevent `.col-auto`, `.col` (& responsive variants) from breaking out the grid
-  padding-right: calc(
-    var(--#{$prefix}gutter-x) * 0.5
-  ); // stylelint-disable-line function-disallowed-list
-  
+  // padding-right: calc(var(--#{$prefix}gutter-x) * 0.5); // stylelint-disable-line function-disallowed-list
+  padding-right: 0;
   /* 
      Instead of canceling the SASS script from .row in _grid.scss line 9,
      I change padding-left from: "calc(var(--#{$prefix}gutter-x) * 0.5"
