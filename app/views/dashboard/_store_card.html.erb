@@ -21,4 +21,12 @@
         <p class="card-text">Phone: <%= store.phone %> </p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
+    
+
+    <div>
+        <%= link_to "Edit this store", edit_store_path(@stores.find(store.id)) %> |
+        <%= link_to "Back to stores", stores_path %>
+
+        <%= button_to "Destroy this store", @store, method: :delete %>
+    </div>
 </div><br>

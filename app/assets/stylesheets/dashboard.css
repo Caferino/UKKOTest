@@ -75,26 +75,23 @@ body {
 .logo-dashboard {
     width: 40px;
     height: 50px;
-    margin-left: calc((var(--sideBar-width) - 50px) / 2); /* Hardcoded: Es 87.5px porque si el SideBar mide 225px netos, le quitamos 50px que mide el logo de ancho, luego dividirlo entre 2 (left and right paddings). De esta manera el logo siempre estará centrado con el Profile Photo */
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .logout {
-    width: 30px;
-    height: 30px;
+    height: 25px;
     border: none;
-    padding-right: 1rem;
+    padding-right: 2.2rem;
     padding-left: 1rem;
     transition: fill 5s ease-in-out;
 }
 
 .logout-hover {
     display: none;
-    width: 30px;
-    height: 30px;
+    height: 25px;
     border: none;
-    padding-right: 1rem;
+    padding-right: 2.2rem;
     padding-left: 1rem;
     transition: fill 5s ease-in-out;
 }
@@ -118,13 +115,13 @@ body {
     width: 100%;
     min-width: 1148px;
     padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
+    padding-left: 0;
     margin-right: auto;
     margin-left: auto;
 }
 
 .row {
-    --bs-gutter-x: 1.5rem;
+    --bs-gutter-x: 0;
     --bs-gutter-y: 0;
     height: 100%;
     display: flex;
@@ -139,4 +136,19 @@ body {
     height: 365px;
     border: solid 1px black;
     background-color: rgb(255, 255, 255);
+}
+
+.container-for-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0; /* Important for flex layout to work properly */
+    max-height: 100vh; /* Set a maximum height based on viewport height */
+
+    /* Add scrollbars if content overflows vertically */
+    overflow-y: auto;
+}
+
+.dashboard-content-title {
+    padding-top: 5px;
 }

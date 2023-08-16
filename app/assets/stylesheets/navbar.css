@@ -19,6 +19,7 @@
     text-decoration: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
     align-items: center;
+    cursor: pointer;
 }
 
 .navbarIcons {
@@ -39,9 +40,17 @@
     margin-right: 0px;
 }
 
+.dashboard-logo-container {
+    width: var(--sideBar-width);
+    display: flex;
+    justify-content: center;
+}
+
 .profilePhoto {
     position: relative;
     align-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 .profileName {
