@@ -8,3 +8,9 @@ function loadContent(contentType) {
       }
     });
   }
+
+  function toggleContent() {
+    const storesContent = document.getElementById('container-for-content');
+    storesContent.classList.toggle('hiddenContent');
+  }
+

@@ -15,8 +15,8 @@
   <body>
 
     <div class="dashboard-content">
-        <%= render 'left_menu/left_menu' unless current_page?(users_index_path) %>
-        <%= render 'dashboard_content/dashboard_content' unless current_page?(users_index_path) %>
+        <%= render 'layouts/left_menu' unless current_page?(users_index_path) %>
+        <%= render 'layouts/dashboard_content' unless current_page?(users_index_path) %>
     </div>
 
     <%= yield %>

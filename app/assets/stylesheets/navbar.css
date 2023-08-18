@@ -60,6 +60,11 @@
     text-align: center;
 }
 
+.buttonWBG {
+    /* background-color: transparent; */
+    border: none;
+}
+
 /* Did not work with "vw" I think, not sure why */
 @media (max-width: 768px) {
     .profileName {

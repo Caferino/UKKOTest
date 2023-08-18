@@ -24,11 +24,17 @@
 
         <!-- Stores -->
         <li class="nav-item">
-            <div id="dashboard-content-id">
-            <!-- Vanilla Attempt -->
+            <div>
+            <!-- Bare HTML and CSS Attempt -->
+            <button id="load-stores-button" class="navLink buttonWBG" onclick="toggleContent()">
+                <img class="navbarIcons" src='/assets/add_story.svg' />
+                <span class="navbarText" >Stores</span>
+            </button>
+
+            <!-- Half AJAX Attempt -->
             <%= link_to 'Load Content', load_content_vanilla_path, remote: true %>
             
-            <!-- AJAX Attempt -->
+            <!-- Full AJAX Attempt -->
             <a class="navLink" onClick="loadContent('store_cards'); return false;">
                 <img class="navbarIcons" src='/assets/add_story.svg' />
                 <span class="navbarText" >Stores</span>
