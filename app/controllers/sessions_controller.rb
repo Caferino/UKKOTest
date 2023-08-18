@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+    skip_before_action :check_session, only: [:create, :destroy]
+
     def create
         @user = User.find_by(email:login_params[:email])
         if @user && @user.authenticate(login_params[:password])

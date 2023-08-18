@@ -21,3 +21,22 @@
 .store-card-image-container {
     padding-left: 5px!important;
 }
+
+.hiddenContent {
+    display: none!important;
+}
+
+.container-for-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0; /* Important for flex layout to work properly */
+    max-height: 100vh; /* Set a maximum height based on viewport height */
+
+    /* Add scrollbars if content overflows vertically */
+    overflow-y: auto;
+}
+
+.dashboard-content-title {
+    padding-top: 5px;
+}

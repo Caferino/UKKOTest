@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
+
+  skip_before_action :check_session, only: [:index, :new, :create]
   
   def index
     # Logic
     
   end
-
-
 
   def new
     @user = User.new

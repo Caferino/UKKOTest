@@ -1,0 +1,21 @@
+<!-- === NavBar === -->
+<header class="header-content">
+
+    <!-- Logo -->
+    <div class="dashboard-logo-container">
+        <%= image_tag 'logoWhite.png', alt: 'Logo', class: 'logo-dashboard', id: 'logo', style: 'cursor: pointer;', onclick: 'toggleNavBar()' %>
+    </div>
+
+    <!-- Logout -->
+    <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+
+        <a id='logout-link' href='#' style='cursor: pointer;' onclick='logout()'>
+            <%= image_tag 'logoutWhite.svg', alt: 'logout', class: 'logout' %>
+            <%= image_tag 'logoutRed.svg', alt: 'logout', class: 'logout-hover' %>
+        </a>
+
+        </div>
+    </div>
+
+</header>

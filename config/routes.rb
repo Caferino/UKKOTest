@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Sign in / Sign up
+  get '/users/index', to: 'users#index', as: 'users_index'
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
 
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
 
 
   # Defines the root path route ("/")
-  root "users#index"
+  root "dashboard#index"
 
   # Route for logging out
   delete '/logout', to: 'sessions#destroy', as: :logout
