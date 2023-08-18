@@ -2,6 +2,19 @@
 
 <h1>Stores</h1>
 
+<!-- Search Bar -->
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom">
+    <div class="input-group">
+        <div class="form-outline">
+            <input type="search" id="form1" class="form-control" />
+            <label class="form-label" for="form1">Search</label>
+        </div>
+        <button type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</div>
+
 <div id="stores">
   <% @stores.each do |store| %>
     <%= render store %>
