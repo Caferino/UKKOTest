@@ -17,19 +17,33 @@
 
     <!-- Dashboard Content -->
     <div id="dashboard-content-id">
-    
+
         <!-- Automated Cards -->
         <!-- Will load Bookstores or Books that exist in the DB -->
-        <div id="container-for-content" class="container-for-content hiddenContent">
+        <div class="container-for-content">
 
-            <!-- IMP: For some reason, Store button onClick=loadContent(store_cards)
-                    isnt doing anything. Fixed the routing errors, just, no cards... -->
+            <!-- Stores Cards -->
+            <div id="container-for-stores" class="hiddenContent">
+                <div class="dashboard-content-title">
+                    <h1> Stores </h1>
+                </div>
+                <% @stores.each do |store| %>
+                    <%= render partial: 'stores/store_card', locals: { store: store } %>
+                <% end %>
+            </div>
 
-            <!-- This works, but it should be a partial, thats what loadContent() should do -->
-            <% @stores.each do |store| %>
-                <%= render partial: 'stores/store_card', locals: { store: store } %>
-            <% end %>
+
+            <!-- Books Cards -->
+            <div id="container-for-books" class="hiddenContent">
+                <div class="dashboard-content-title">
+                    <h1> Books </h1>
+                </div>
+                <% @books.each do |book| %>
+                    <%= render partial: 'books/book_card', locals: { book: book } %>
+                <% end %>
+            </div>
+            
         </div>
-    </div>
-    
+
+    </div>   
 </main>

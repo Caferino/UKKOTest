@@ -1,11 +1,6 @@
 <!-- app/views/books/_book_card.html.erb -->
 
-<!-- Title -->
-<div class="dashboard-content-title">
-    <h1> Books </h1>
-</div>
-
-<!-- Store Card -->
+<!-- Book Card -->
 <div class="card">
     <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
@@ -29,9 +24,9 @@
             </div>
             <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title"> <%= store.codename %> </h5>
-                <p class="card-text">Address: <%= store.address %> </p>
-                <p class="card-text">Phone: <%= store.phone %> </p>
+                <h5 class="card-title"> <%= book.title %> </h5>
+                <p class="card-text">Address: <%= book.author %> </p>
+                <p class="card-text">Phone: <%= book.year %> </p>
                 <a href="#" class="btn btn-primary">Library</a>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
@@ -39,9 +34,9 @@
     </div>
 
     <div>
-        <%= link_to "Edit this store", edit_store_path(@stores.find(store.id)) %> |
-        <%= link_to "Back to stores", stores_path %>
+        <%= link_to "Edit this book", edit_book_path(@books.find(book.id)) %> |
+        <%= link_to "Back to books", books_path %>
 
-        <%= button_to "Destroy this store", @store, method: :delete %>
+        <%= button_to "Destroy this book", @book, method: :delete %>
     </div>
 </div><br>

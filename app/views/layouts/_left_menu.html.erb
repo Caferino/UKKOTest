@@ -24,34 +24,21 @@
 
         <!-- Stores -->
         <li class="nav-item">
-            <div>
             <!-- Bare HTML and CSS Attempt -->
-            <button id="load-stores-button" class="navLink buttonWBG" onclick="toggleContent()">
+            <button class="navLink buttonWBG" onclick="load_content('stores')">
                 <img class="navbarIcons" src='/assets/add_story.svg' />
                 <span class="navbarText" >Stores</span>
             </button>
-
-            <!-- Half AJAX Attempt -->
-            <%= link_to 'Load Content', load_content_vanilla_path, remote: true %>
-            
-            <!-- Full AJAX Attempt -->
-            <a class="navLink" onClick="loadContent('store_cards'); return false;">
-                <img class="navbarIcons" src='/assets/add_story.svg' />
-                <span class="navbarText" >Stores</span>
-            </a>
-            </div>
         </li>
         <p> <!-- ------- --> </p>
 
 
         <!-- Books -->
         <li class="nav-item">
-            <div>
-            <a class="navLink" onClick="loadContent('load_books'); return false;">
+            <button class="navLink buttonWBG" onClick="load_content('books')">
                 <img class="navbarIcons" src='/assets/stories.svg' />
                 <span class="navbarText" >Books</span>
-            </a>
-            </div>
+            </button>
         </li>
         <p> <!-- ------- --> </p>
 
