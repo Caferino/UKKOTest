@@ -10,6 +10,8 @@
     
     <%= javascript_importmap_tags %>
     <%= javascript_include_tag 'logout' %>
+    <!-- I will leave data-turbo-track in case I use AJAX -->
+    <%= javascript_include_tag 'dashboard', 'data-turbo-track': 'reload' %>
   </head>
 
   <body>
