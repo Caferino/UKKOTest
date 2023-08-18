@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Registration</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
-    <%= javascript_importmap_tags %>
-    <%= javascript_include_tag 'logout' %>
-    <!-- I will leave data-turbo-track in case I use AJAX -->
-    <%= javascript_include_tag 'dashboard', 'data-turbo-track': 'reload' %>
-  </head>
-
-  <body>
-
-    <div class="dashboard-content">
-        <%= render 'layouts/left_menu' unless current_page?(users_index_path) %>
-        <%= render 'layouts/dashboard_content' unless current_page?(users_index_path) %>
-    </div>
-
-    <%= yield %>
-  
-  </body>
-</html>
+<div class="dashboard-content">
+    <%= render 'left_menu' unless current_page?(users_index_path) %>
+    <%= render 'dashboard_content' unless current_page?(users_index_path) %>
+</div>
