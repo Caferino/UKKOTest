@@ -33,5 +33,6 @@
     </div>
     <% @stores.each do |store| %>
         <%= render partial: 'store_card', locals: { store: store } %>
+        <%= render partial: 'stocks/stock_form' %>
     <% end %>
 </div>
