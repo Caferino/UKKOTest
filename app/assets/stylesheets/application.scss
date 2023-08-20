@@ -2,6 +2,12 @@
  @import 'bootstrap';
  @import 'mdb-ui-kit/css/mdb.min.css';
 
+ // Import Tailwind CSS
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+
 /* Other Custom Styles */
  @import 'signin.css';
  @import 'navbar.css';
