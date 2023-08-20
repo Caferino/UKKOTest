@@ -1,20 +1,24 @@
 <!-- app/views/stores/_store_card.html.erb -->
 
-<!-- Store Card -->
+<!-- Store Card Menu -->
 <div class="card">
     <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-            <a class="nav-link active" href="#">Info</a>
+            <%= link_to 'Info', '#', class: 'nav-link active', data: { section: 'info' } %>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Stock</a>
+            <%= link_to 'Stock', '#', class: 'nav-link', data: { section: 'stock' } %>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Config</a>
+            <%= link_to 'Config', '#', class: 'nav-link', data: { section: 'config' } %>
         </li>
         </ul>
     </div>
+
+
+    <!-- Content Sections -->
+
 
     <!-- Photo and Description -->
     <div class="card-body">

@@ -35,4 +35,9 @@
         <%= render partial: 'store_card', locals: { store: store } %>
         <%= render partial: 'stocks/stock_form' %>
     <% end %>
+
+    <br>
+
+    <!-- Stock Section for Stores -->
+    <%= render partial: 'stock', locals: { store: store } %>
 </div>
