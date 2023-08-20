@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/dashboard' => 'dashboard#index'
   get 'load_content', to: 'dashboard#load_content'
 
+  # Stock controller
+  post 'assign_stock', to: 'stocks#assign_stock'
 
   # Defines the root path route ("/")
   root "dashboard#index"
