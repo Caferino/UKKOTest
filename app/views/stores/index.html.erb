@@ -15,6 +15,8 @@
     </div>
 </div>
 
+
+<!-- Original Ruby on Rails Template
 <div id="stores">
   <% @stores.each do |store| %>
     <%= render store %>
@@ -25,6 +27,7 @@
 </div>
 
 <%= link_to "New store", new_store_path %>
+-->
 
 <!-- Stores Cards -->
 <div id="container-for-stores" class="">
@@ -32,12 +35,12 @@
         <h1> Stores </h1>
     </div>
     <% @stores.each do |store| %>
+        <!-- Stock Cards for Stores -->
         <%= render partial: 'store_card', locals: { store: store } %>
-        <%= render partial: 'stocks/stock_form' %>
+        <!-- Stock Section for Stores -->
+        <%= render partial: 'stock_table', locals: { store: store } %>
     <% end %>
 
     <br>
 
-    <!-- Stock Section for Stores -->
-    <%= render partial: 'stock' %>
 </div>
