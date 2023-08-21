@@ -1,0 +1,33 @@
+<!-- Stock Section for Stores -->
+<div class="overflow-x-auto">
+  <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+    <thead class="ltr:text-left">
+      <tr>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Title
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Year
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Author
+        </th>
+        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+          Quantity
+        </th>
+        <th class="px-4 py-2"></th>
+      </tr>
+    </thead>
+
+
+    <!-- EJEMPLO 1 -->
+    <tbody class="divide-y divide-gray-200">
+
+      <% stocks.each do |stock| %>
+        <%= render partial: 'stock_row', locals: { stock: stock } %>
+      <% end %>
+
+    </tbody>
+
+  </table>
+</div>

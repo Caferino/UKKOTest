@@ -1,0 +1,23 @@
+<!-- Info Section -->
+<div class="card-body">
+    <div class="row no-gutters">
+        <div class="col-md-4 store-card-image-container">
+            <%= image_tag 'imagePlaceholder.jpg', alt: 'Card Image', class: 'card-img' %>
+        </div>
+        <div class="col-md-8">
+        <div class="card-body">
+            <h5 class="card-title"> <%= store.codename %> </h5>
+            <p class="card-text">Address: <%= store.address %> </p>
+            <p class="card-text">Phone: <%= store.phone %> </p>
+            <a href="#" class="btn btn-primary">Save</a>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+</div>
+
+<div>
+    <%= link_to "Edit this store", edit_store_path(@stores.find(store.id)) %> |
+    <%= link_to "Back to stores", stores_path %>
+
+    <%= button_to "Destroy this store", @store, method: :delete %>
+</div>

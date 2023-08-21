@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'load_content', to: 'dashboard#load_content'
 
   # Stock controller
-  post 'assign_stock', to: 'stocks#assign_stock'
+  post '/assign_stock', to: 'stocks#assign_stock', as: :assign_stock
 
   # Defines the root path route ("/")
   root "dashboard#index"

@@ -36,6 +36,9 @@ gem "bcrypt"
 # Bootstrap (solo para el navBar del Dashboard)
 gem "bootstrap", "~> 5.2"
 
+# TailwindCSS
+gem "tailwindcss-rails"
+
 # FontAwesome, for the Search Bar
 gem "font-awesome-rails"
 

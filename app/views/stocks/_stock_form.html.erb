@@ -1,6 +1,6 @@
 <%= form_tag(assign_stock_path, method: :post) do %>
-    <%= select_tag :book_id, options_for_select(Book.all.map { |b| [b.title, b.id] }) %>
+    <%= hidden_field_tag :book_id, book.id %>
     <%= select_tag :store_id, options_for_select(Store.all.map { |s| [s.codename, s.id] }) %>
     <%= text_field_tag :quantity, '', placeholder: 'Enter quantity' %>
-    <%= submit_tag 'Assign Stock' %>
+    <%= submit_tag 'Assign Stock', class: 'btn btn-primary' %>
 <% end %>
