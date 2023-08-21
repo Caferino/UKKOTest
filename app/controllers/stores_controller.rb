@@ -5,7 +5,8 @@ class StoresController < ApplicationController
   def index
     @stores = Store.all
     # Certain store with at least 1 or more books
-    @stocks = Stock.joins(:store).where('stocks.quantity > ?', 5)
+    @stocks = Stock.joins(:store).where('stocks.quantity > ?', 0)
+    @current_section = 'info' # Set the initial active section to 'info'
   end
 
   # GET /stores/1 or /stores/1.json
