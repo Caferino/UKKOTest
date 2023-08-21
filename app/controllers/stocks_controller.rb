@@ -8,6 +8,7 @@ class StocksController < ApplicationController
         # Find or create the stock entry and update the quantity
         stock = Stock.find_or_initialize_by(book: book, store: store)
         stock.quantity ||= 0  # Initialize to 0 if stock.quantity is nil
+        # !IMP: What if it's below 0 because the user assigned negative amounts? A lot.
         stock.quantity += quantity
         stock.save
     end
