@@ -3,7 +3,6 @@ class StoresController < ApplicationController
 
   # GET /stores or /stores.json
   def index
-    @stores = Store.all
     # Certain store with at least 1 or more books
     @stocks = Stock.joins(:store).where('stocks.quantity > ?', 0)
     @current_section = 'info' # Set the initial active section to 'info'
