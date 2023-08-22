@@ -39,6 +39,9 @@ gem "bootstrap", "~> 5.2"
 # TailwindCSS
 gem "tailwindcss-rails"
 
+# Ransack (For search bars filtering)
+gem 'ransack'
+
 # FontAwesome, for the Search Bar
 gem "font-awesome-rails"
 

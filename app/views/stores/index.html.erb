@@ -3,6 +3,13 @@
 <h1>Stores</h1>
 
 <!-- Search Bar -->
+<%= search_form_for @q do |f| %>
+    # Search if the name field contains...
+    <%= f.label :codename_cont %>
+    <%= f.search_field :codename_cont %>
+    <%= f.submit 'Search' %>
+<% end %>
+
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom">
     <div class="input-group">
         <div class="form-outline">
